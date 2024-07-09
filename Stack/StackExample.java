@@ -33,8 +33,16 @@ public class StackExample {
         fruits.push("Peach");
        // System.out.println("Pile: " + fruits);
 
+       //Sppression des élements et verification si la pile est vide 
+       while (!fruits.isEmpty()){
+           fruits.pop();
+       System.out.println("Les éléments dans la pile sont: " + fruits);
+       System.out.println("Ma pile est-elle vide? " +  fruits.isEmpty());
+
+       }
+    }
        
 
 
-    }
+    
 }

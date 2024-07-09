@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class HashMapExample {
     public static void main(String[] args) {
@@ -13,12 +14,15 @@ public class HashMapExample {
         System.out.println("La taille du map est: " + mapTest.size());
 
         // Parcourir les éléménts du map
-        for (Map.Entry mp : mapTest.entrySet()) {
+        for (Entry<String, Integer> mp : mapTest.entrySet()) {
             System.out.println(mp.getKey() + "" + mp.getValue());
 
         }
+        mapTest.put("Orange", 14);
 
         mapTest.remove("Peach", 25);
+        mapTest.remove("Peach");
+        System.out.println(mapTest);
         System.out.println("Après la suppression de peach: " + mapTest);
 
         // Vérifiaction si la clé existe, si oui, afficher sa valeur
